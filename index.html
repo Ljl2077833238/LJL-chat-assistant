@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 多轮对话助手</title>
+    <!-- 引入外部 CSS 和自己写的 CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 通过 CDN 引入 Marked 库，用于解析 AI 返回的 Markdown 内容 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 要求 1：标题和说明 -->
+        <h1>智能对话助手</h1>
+        <p class="desc">基于 qwen3.6-plus 模型，支持多轮上下文理解。</p>
+
+        <!-- 要求 2：API Key 输入框 -->
+        <div class="input-card">
+            <input type="password" id="apiKey" placeholder="输入您的阿里云百炼 API Key (Key 不会被上传)">
+        </div>
+
+        <!-- 要求 5：回复显示区 -->
+        <div id="chatWindow" class="chat-window">
+            <div class="system-msg">欢迎！请输入问题开始对话。</div>
+        </div>
+
+        <!-- 要求 6 & 7：加载和错误提示 -->
+        <div id="loading" class="status-msg" style="display: none;">🧠 正在思考中...</div>
+        <div id="error" class="status-msg error" style="display: none;"></div>
+
+        <div class="input-area">
+            <!-- 要求 3：用户输入区 -->
+            <textarea id="userInput" placeholder="请输入你的问题..."></textarea>
+            
+            <div class="btns">
+                <!-- 要求 4：生成按钮 -->
+                <button id="sendBtn">发送消息</button>
+                <!-- 要求 8：清空/重开按钮 -->
+                <button id="clearBtn" class="secondary">开启新对话</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

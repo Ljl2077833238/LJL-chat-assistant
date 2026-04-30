@@ -1,0 +1,13 @@
+body { background: #f4f7f6; font-family: 'PingFang SC', sans-serif; color: #333; }
+.container { max-width: 800px; margin: 20px auto; padding: 20px; }
+.chat-window { background: white; border-radius: 12px; height: 400px; overflow-y: auto; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.msg { margin-bottom: 15px; padding: 10px 15px; border-radius: 10px; max-width: 80%; line-height: 1.5; }
+.user-msg { background: #007bff; color: white; align-self: flex-end; margin-left: auto; }
+.assistant-msg { background: #e9ecef; color: #333; }
+.input-area textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 10px; height: 80px; box-sizing: border-box; }
+.btns { margin-top: 10px; display: flex; gap: 10px; }
+button { flex: 1; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+button:hover { background: #0056b3; }
+button.secondary { background: #6c757d; }
+.status-msg { text-align: center; font-size: 0.9em; margin-bottom: 10px; color: #666; }
+.error { color: #dc3545; }
